@@ -1,0 +1,25 @@
+{
+  "name": "UI-3",
+  "short_name": "UI-3",
+  "description": "UI-3 - ADHD-friendly planner",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F6F3ED",
+  "theme_color": "#1E7A63",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
