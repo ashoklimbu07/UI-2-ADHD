@@ -1,5 +1,5 @@
-const CACHE_NAME = 'ui-3-v1';
-const APP_SHELL = ['./index.html', './manifest.json', './favicon.svg'];
+const CACHE_NAME = 'ui-3-v2';
+const APP_SHELL = ['./index.html', './manifest.json', './favicon.svg', './icon-192.png', './icon-512.png', './icon-512-maskable.png'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
