@@ -40,7 +40,17 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
-        navigator.serviceWorker.register('sw.js').catch(function () {});
+        navigator.serviceWorker.register('sw.js').then(function (reg) {
+          // Check for a new sw.js whenever the tab regains focus, and
+          // reload once the new version takes control, so already-open
+          // tabs pick up a fresh deploy without a manual close/reopen.
+          document.addEventListener('visibilitychange', function () {
+            if (document.visibilityState === 'visible') reg.update();
+          });
+          navigator.serviceWorker.addEventListener('controllerchange', function () {
+            window.location.reload();
+          });
+        }).catch(function () {});
       });
     }
   </script>
